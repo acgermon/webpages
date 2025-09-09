@@ -1,0 +1,101 @@
+2025-09-09 12:30:38.772 [info] [main] Log level: Info
+2025-09-09 12:30:38.772 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
+2025-09-09 12:30:38.772 [info] [main] Using git "2.51.0.windows.1" from "C:\Program Files\Git\cmd\git.exe"
+2025-09-09 12:30:38.772 [info] [Model][doInitialScan] Initial repository scan started
+2025-09-09 12:30:38.773 [info] > git rev-parse --show-toplevel [67ms]
+2025-09-09 12:30:38.893 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [118ms]
+2025-09-09 12:30:38.899 [info] [Model][openRepository] Opened repository (path): c:\Users\Aidan\Downloads\WebpagesGL_files
+2025-09-09 12:30:38.899 [info] [Model][openRepository] Opened repository (real path): c:\Users\Aidan\Downloads\WebpagesGL_files
+2025-09-09 12:30:38.899 [info] [Model][openRepository] Opened repository (kind): repository
+2025-09-09 12:30:38.902 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-09-09 12:30:39.135 [info] > git config --get commit.template [40ms]
+2025-09-09 12:30:39.136 [info] [Git][getRemotes] No remotes found in the git config file
+2025-09-09 12:30:39.202 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [62ms]
+2025-09-09 12:30:39.202 [warning] [Git][getBranch] No such branch: main
+2025-09-09 12:30:39.243 [info] > git status -z -uall [36ms]
+2025-09-09 12:30:39.244 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [33ms]
+2025-09-09 12:30:39.262 [info] [Git][getRemotes] No remotes found in the git config file
+2025-09-09 12:30:39.284 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [35ms]
+2025-09-09 12:30:39.285 [warning] [Git][getBranch] No such branch: main
+2025-09-09 12:30:39.285 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-09-09 12:30:39.292 [info] > git config --get commit.template [33ms]
+2025-09-09 12:30:39.294 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [33ms]
+2025-09-09 12:30:39.295 [warning] [Git][getBranch] No such branch: main
+2025-09-09 12:30:39.336 [info] > git status -z -uall [39ms]
+2025-09-09 12:30:39.336 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [37ms]
+2025-09-09 12:30:39.363 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [52ms]
+2025-09-09 12:30:39.363 [info] fatal: bad revision 'refs/heads/main'
+2025-09-09 12:30:39.364 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-09-09 12:30:39.379 [info] > git show --textconv :WebpagesGL.html [44ms]
+2025-09-09 12:30:39.385 [info] > git show --textconv HEAD:WebpagesGL.html [44ms]
+2025-09-09 12:30:39.389 [info] > git ls-files --stage -- WebpagesGL.html [43ms]
+2025-09-09 12:30:39.394 [info] > git ls-tree -l HEAD -- WebpagesGL.html [45ms]
+2025-09-09 12:30:39.394 [info] fatal: Not a valid object name HEAD
+2025-09-09 12:30:39.421 [info] > git hash-object -t tree /dev/null [32ms]
+2025-09-09 12:30:39.421 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.html%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 12:30:39.424 [info] > git cat-file -s 74755bf5beeba0c6ea5a4829064980337095db6e [33ms]
+2025-09-09 12:30:39.431 [info] > git hash-object -t tree /dev/null [34ms]
+2025-09-09 12:30:39.431 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.html%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 12:30:39.673 [info] > git check-ignore -v -z --stdin [29ms]
+2025-09-09 12:30:48.360 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [31ms]
+2025-09-09 12:30:48.360 [info] fatal: bad revision 'refs/heads/main'
+2025-09-09 12:30:48.360 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-09-09 12:31:01.964 [info] > git show --textconv :.git/COMMIT_EDITMSG [35ms]
+2025-09-09 12:31:01.965 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/.git/COMMIT_EDITMSG.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5C.git%5C%5CCOMMIT_EDITMSG%22%2C%22ref%22%3A%22%22%7D
+2025-09-09 12:31:01.965 [info] > git ls-files --stage -- .git/COMMIT_EDITMSG [32ms]
+2025-09-09 12:31:01.965 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/.git/COMMIT_EDITMSG.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5C.git%5C%5CCOMMIT_EDITMSG%22%2C%22ref%22%3A%22%22%7D
+2025-09-09 12:31:02.269 [info] > git check-ignore -v -z --stdin [28ms]
+2025-09-09 14:01:08.513 [info] > git show --textconv HEAD:WebpagesGL.css [44ms]
+2025-09-09 14:01:08.513 [info] > git show --textconv :WebpagesGL.css [49ms]
+2025-09-09 14:01:08.514 [info] > git ls-tree -l HEAD -- WebpagesGL.css [39ms]
+2025-09-09 14:01:08.515 [info] fatal: Not a valid object name HEAD
+2025-09-09 14:01:08.515 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.css.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.css%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:01:08.515 [info] > git ls-files --stage -- WebpagesGL.css [44ms]
+2025-09-09 14:01:08.520 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.css.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.css%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:01:08.552 [info] > git cat-file -s 422e26c0c6d2b4a6352a92608f38dae8f66938b2 [33ms]
+2025-09-09 14:01:10.505 [info] > git show --textconv :WebpagesGL.html [41ms]
+2025-09-09 14:01:10.508 [info] > git show --textconv HEAD:WebpagesGL.html [41ms]
+2025-09-09 14:01:10.508 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.html%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:01:10.510 [info] > git ls-files --stage -- WebpagesGL.html [40ms]
+2025-09-09 14:01:10.514 [info] > git ls-tree -l HEAD -- WebpagesGL.html [41ms]
+2025-09-09 14:01:10.514 [info] fatal: Not a valid object name HEAD
+2025-09-09 14:01:10.514 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.html%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:01:10.545 [info] > git cat-file -s 74755bf5beeba0c6ea5a4829064980337095db6e [33ms]
+2025-09-09 14:01:12.727 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [32ms]
+2025-09-09 14:01:12.727 [info] fatal: bad revision 'refs/heads/main'
+2025-09-09 14:01:12.728 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-09-09 14:05:45.640 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [35ms]
+2025-09-09 14:05:45.640 [info] fatal: bad revision 'refs/heads/main'
+2025-09-09 14:05:45.640 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-09-09 14:12:10.602 [info] > git ls-files --stage -- WebpagesGL.css [31ms]
+2025-09-09 14:12:10.606 [info] > git show --textconv :WebpagesGL.css [36ms]
+2025-09-09 14:12:10.634 [info] > git cat-file -s 422e26c0c6d2b4a6352a92608f38dae8f66938b2 [30ms]
+2025-09-09 14:12:11.106 [info] > git check-ignore -v -z --stdin [29ms]
+2025-09-09 14:12:13.628 [info] > git show --textconv HEAD:WebpagesGL.css [33ms]
+2025-09-09 14:12:13.628 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.css.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.css%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:12:13.629 [info] > git show --textconv :WebpagesGL.css [37ms]
+2025-09-09 14:12:13.632 [info] > git ls-files --stage -- WebpagesGL.css [35ms]
+2025-09-09 14:12:13.635 [info] > git ls-tree -l HEAD -- WebpagesGL.css [35ms]
+2025-09-09 14:12:13.635 [info] fatal: Not a valid object name HEAD
+2025-09-09 14:12:13.635 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/Aidan/Downloads/WebpagesGL_files/WebpagesGL.css.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CAidan%5C%5CDownloads%5C%5CWebpagesGL_files%5C%5CWebpagesGL.css%22%2C%22ref%22%3A%22HEAD%22%7D
+2025-09-09 14:12:13.665 [info] > git cat-file -s 422e26c0c6d2b4a6352a92608f38dae8f66938b2 [31ms]
